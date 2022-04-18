@@ -1,32 +1,54 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <Shortcut></Shortcut>
+    <Nav></Nav>
+    <Slideshow></Slideshow>
+    <Sliderbar></Sliderbar>
+    <Tuijian></Tuijian> 
+    <Recommend></Recommend>
+    <Public></Public>
+    <New></New>
+    <Active></Active>
+    <Any></Any>
+    <Footer></Footer>
+    <Base></Base>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<script>
+import Shortcut from './views/shortcut/shortcut.vue'
+import Nav from './views/nav/nav.vue'
+import Slideshow from './views/slideshow/slideshow.vue'
+import Sliderbar from './views/sliderbar/sliderbar.vue'
+import Tuijian from './views/tuijian/tuijian.vue'
+import Recommend from './views/recommend/recommend.vue'
+import Public from './views/public/public.vue'
+import New from './views/new/new.vue'
+import Active from './views/active/active.vue'
+import Any from './views/any/any.vue'
+import Footer from './views/footer/footer.vue'
+import Base from './views/base/base.vue'
+export default {
+  components:{
+    Shortcut,
+    Nav,
+    Slideshow,
+    Sliderbar,
+    Tuijian,
+    Recommend,
+    Public,
+    New,
+    Active,
+    Any,
+    Footer,
+    Base
   }
 }
+</script>
+
+<style lang="less">
+  *{
+    padding: 0;
+    margin: 0;
+  }
 </style>
