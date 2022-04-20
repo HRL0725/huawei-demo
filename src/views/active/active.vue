@@ -1,68 +1,25 @@
 <template>
  <div class="w active">
-        <div class="active_l">
+        <div class="active_l" v-for="item in active" :key="item.id">
             <div class="active_l_top">
                 <a href="#"><img src="../../assets/11.jpg" alt=""></a>
             </div>
-            <span class="active_l_center">展会活动</span>
+            <span class="active_l_center">{{item.text}}</span>
             <div class="active_l_under">
                 <a>
-                    <h4>2022世界移动大会</h4>
-                    <span class="site">西班牙，巴塞罗那</span><span class="date">2022年2月28日 - 3月3日</span>
-                    <p>面向未来，华为与全球运营商、合作伙伴一起，打造极简、绿色、智能的ICT基础设施，坚持科技向善，致力于以创新的技术和产品解决方案让生活更美好、商业更智...</p>
-                </a>
-            </div>
-        </div>
-        <div class="active_c">
-            <div class="active_c_top">
-                <a><img src="../../assets/12.jpg" alt=""></a>
-            </div>
-            <span class="active_c_center">展会活动</span>
-            <div class="active_c_under">
-                <a href="#">
-                    <h4>2022运营转型峰会</h4>
-                    <span class="site">西班牙，巴塞罗那</span><span class="date">2022年3月1日 - 2日</span>
-                    <p>
-                        沿着运营运维数智化转型的旅程，携手将数智技术和创新带入运营运维每一个环节，引领智能新体验、新价值，构建万物互联的智能世界。
-                    </p>
+                    <h4>{{item.text1}}</h4>
+                    <span class="site">{{item.text2}}</span><span class="date">{{item.text3}}</span>
+                    <p>{{item.text4}}</p>
                 </a>
             </div>
         </div>
         <div class="active_r">
             <div>
-                <a href="#" class="red">
+                <a href="#" class="red" v-for="item in active1" :key="item.id">
                     <h4>
-                        华为获新加坡资媒局授予数据保护信任标志
+                        {{item.text}}
                     </h4>
-                    <span>2022年03月16日</span>
-                </a>
-                <a href="#" class="red">
-                    <h4>
-                        华为和中国联通携手产业伙伴发布5G专网PLUS系列成果
-                    </h4>
-                    <span>2022年03月11日</span>
-                </a>
-                <a href="#" class="red">
-                    <h4>
-                        华为联合中国移动等产业伙伴发布《5G -Advanced网络技术演进白皮书2.0》
-                    </h4>
-                    <span>
-                        2022年03月10日
-                    </span>
-                </a>
-                <a href="#" class="red">
-                    <h4>
-                        "打破偏见"，华为庆祝2022国际妇女节
-                    </h4>
-                    <span>
-                        2022年03月09日
-                    </span>
-                </a>
-                <a href="#" class="red">
-                    <h4>
-                        华为联合中国信通院、中国移动研究院发布《5G ToC音视频体验需求蓝皮书》
-                    </h4>
-                    <span>2022年03月08日</span>
+                    <span>{{item.text1}}</span>
                 </a>
             </div>
             <span class="active_r_top">新闻</span>
@@ -71,8 +28,21 @@
 </template>
 
 <script>
+ import jsonData from "../../../data"
 export default {
-
+    data(){
+    return {
+      active:[],
+      active1:[]
+    }
+  },
+mounted(){
+ console.log(555,jsonData);
+ this.active = jsonData.active
+ console.log(666,this.active);
+ this.active1  = jsonData.active1
+ console.log(777,this.active1);
+ }
 }
 </script>
 

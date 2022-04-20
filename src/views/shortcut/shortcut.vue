@@ -9,79 +9,21 @@
     </div>
     <div class="shortcut_under">
       <div class="item">
-        <dl>
-          <dt class="before">集团网站</dt>
-          <dd>公司介绍，新闻动态，展会活动<br>等信息</dd>
-        </dl>
-        <dl>
-          <dt class="after"><a>消费业务网站</a></dt>
-          <dd>手机，PC和平板等智慧生活产<br>品</dd>
-        </dl>
-        <dl>
-          <dt class="after"><a>企业业务网站</a></dt>
-          <dd>企业商用产品、解决方案和云服<br>务</dd>
-        </dl>
-        <dl>
-          <dt class="after"><a>运营商业务网络网站</a></dt>
-          <dd>运营商网络解决方案、产品及服<br>务</dd>
-        </dl>
-        <dl>
-          <dt class="after"><a>华为云网站</a></dt>
-          <dd>华为云服务及解决方<br>案</dd>
+        <dl v-for="item in shortcut1" :key="item.id"> 
+          <dt class="before">{{item.text}}</dt>
+          <dd>{{item.text1}}</dd>
         </dl>
       </div>
       <div class="language">
          <h1>选择区域/语言</h1>
                 <div class="language_place">
                     <table class="language_td">
-                        <tr>
-                            <td>Australia - <a>English</a></td>
-                            <td>Belarus - <a>Pусский</a></td>
-                            <td>Brazil - <a>Portuguese</a></td>
-                            <td>Canada - <a>English</a></td>
-                            <td class="china">China - <a>简体中文</a></td>
-                        </tr>
-                        <tr>
-                            <td>France - <a>Français</a></td>
-                            <td>Germany - <a>Deutsch</a></td>
-                            <td>Ireland - <a>English</a></td>
-                            <td>Italy - <a>Italiano</a></td>
-                            <td>Japan - <a>日本語</a></td>
-                        </tr>
-                        <tr>
-                            <td>Kazakstan - <a>Pусский</a></td>
-                            <td>Kenya - <a>English</a></td>
-                            <td>Korea - <a>한국어</a></td>
-                            <td>Malaysia - <a>English</a></td>
-                            <td>Mexico - <a>Español</a></td>
-                        </tr>
-                        <tr>
-                            <td>New Zealand - <a>English</a></td>
-                            <td>Netherlands - <a>Dutch</a></td>
-                            <td>Romania - <a>Română</a></td>
-                            <td>Russia - <a>Pусский</a></td>
-                            <td>South Africa - <a>English</a></td>
-                        </tr>
-                        <tr>
-                            <td>Spain - <a>Español</a></td>
-                            <td>Switzerland - <a>English</a></td>
-                            <td>Thailand - <a>ภาษาไทย</a></td>
-                            <td>Turkey - <a>Türkiye</a></td>
-                            <td>kraine - <a>Українська</a></td>
-                        </tr>
-                        <tr>
-                            <td>United Kingdom - <a>English</a></td>
-                            <td>United States - <a>English</a></td>
-                            <td>Uzbekistan - <a>Pусский</a></td>
-                            <td>Uzbekistan - <a>O'zbek</a></td>
-                            <td>Vietnam - <a>Tiếng Việt</a></td>
-                        </tr>
-                        <tr>
-                            <td>Global- <a>English</a></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr v-for="item in shortcut2" :key="item.id">
+                          <td>{{item.country1}}<a>{{item.language1}}</a></td>
+                          <td>{{item.country2}}<a>{{item.language2}}</a></td>
+                          <td>{{item.country3}}<a>{{item.language3}}</a></td>
+                          <td>{{item.country4}}<a>{{item.language4}}</a></td>
+                          <td>{{item.country5}}<a>{{item.language5}}</a></td>
                         </tr>
                     </table>
                 </div>
@@ -91,7 +33,15 @@
 </template>
 
 <script>
+import shortcutData from "../../../data"
 export default {
+  data() {
+    return {
+      shortcut1: [],
+      shortcut2:[],
+
+    }
+  },
   methods:{
     language_click(){
       var language = document.querySelector('.language')
@@ -109,6 +59,14 @@ export default {
         item.style.display = 'none'
       }
     }
+  },
+  mounted(){
+    console.log(shortcutData);
+    this.shortcut1 = shortcutData.shortcut1
+    this.shortcut2 = shortcutData.shortcut2
+    this.country = shortcutData.shortcut2.country
+    console.log(222,this.shortcut1);
+    console.log(224,this.shortcut2);
   }
 
 }
@@ -189,7 +147,7 @@ export default {
         background-color: #f7f7f7;
         dl{
           float: left;
-          margin: 40px 70px;
+          margin: 40px 60px;
           dt{
             font-size: 17px;
             color: #4d4d4d;
@@ -249,8 +207,6 @@ export default {
             color: #808080;
             font-size: 17px;
             a{
-              font-size: 17px;
-              color: #808080;
               cursor: pointer;
               text-decoration: none;
             }
@@ -261,14 +217,12 @@ export default {
               color: #000;
               a{
                 font-weight: 700;
-                color: #000;
               }
               ::before{
                 display: inline-block;
                 font-family: 'icomoon';
                 content: '\e930';
                 color: red;
-                font-size: 17px;
                 margin-right: 5px;
               }
               a:hover{

@@ -5,50 +5,20 @@
             <a href="#" class="footer_top_r"></a>
         </div>
         <div class="footer_center">
-            <dl>
-                <dt>关于华为</dt>
-                <dd><a href="#">公司简介</a></dd>
-                <dd><a href="#">可持续发展</a></dd>
-                <dd><a href="#">信任中心</a></dd>
-                <dd><a href="#">管理层信息</a></dd>
-                <dd><a href="#">招贤纳士</a></dd>
-                <dd><a href="#">供应商</a></dd>
-                <dd><a href="#" class="look">查看更多</a></dd>
-            </dl>
-            <dl>
-                <dt>新闻与活动</dt>
-                <dd><a href="#">新闻</a></dd>
-                <dd><a href="#">展会活动</a></dd>
-                <dd><a href="#">媒体图库</a></dd>
-            </dl>
-            <dl>
-                <dt>发现华为</dt>
-                <dd><a href="#">HuaweiTech</a></dd>
-                <dd><a href="#">出版物</a></dd>
-            </dl>
-            <dl>
-                <dt>我们的产品</dt>
-                <dd><a href="#">个人及家庭产品</a></dd>
-                <dd><a href="#">企业业务产品</a></dd>
-                <dd><a href="#">运营商网络产品</a></dd>
-                <dd><a href="#">华为云服务</a></dd>
-            </dl>
-            <dl>
-                <dt>技术支持</dt>
-                <dd><a href="#">消费者技术支持</a></dd>
-                <dd><a href="#">华为技术支持</a></dd>
-                <dd><a href="#">企业技术支持</a></dd>
-                <dd><a href="#">运营商技术支持</a></dd>
-                <dd><a href="#">产品安全通告</a></dd>
+            <dl v-for="item in footer" :key="item.id">
+                <dt>{{item.text}}</dt>
+                <dd><a href="#">{{item.text1}}</a></dd>
+                <dd><a href="#">{{item.text2}}</a></dd>
+                <dd><a href="#">{{item.text3}}</a></dd>
+                <dd><a href="#">{{item.text4}}</a></dd>
+                <dd><a href="#">{{item.text5}}</a></dd>
+                <dd><a href="#">{{item.text6}}</a></dd>
+                <dd><a href="#">{{item.text7}}</a></dd>
             </dl>
         </div>
         <div class="footer_under">
             <ul class="footer_under_l">
-                <li><a href="#">华为商城</a></li>
-                <li><a href="#">华为云</a></li>
-                <li><a href="#">华为智能光伏</a></li>
-                <li><a href="#">产品定义社区</a></li>
-                <li><a href="#">华为心声社会</a></li>
+                <li v-for="item in footer1" :key="item.id"><a href="#">{{item.text}}</a></li>
             </ul>
             <div class="footer_under_r">
                 <a href="#" class="weibo"></a>
@@ -62,8 +32,20 @@
 </template>
 
 <script>
+import jsonData from "../../../data"
 export default {
-
+  data(){
+    return {
+      footer:[],
+      footer1:[]
+    }
+  },
+  mounted(){
+    this.footer = jsonData.footer
+    console.log(230,this.footer)
+     this.footer1 = jsonData.footer1
+    console.log(231,this.footer1);
+  }
 }
 </script>
 
@@ -117,7 +99,7 @@ export default {
       height: 320px;
       margin: 0 auto;
       border-bottom: 1px solid #ccc;
-      dl{
+      dl{ 
         padding: 10px 0;
         dt{
           font-size: 18px;
@@ -131,15 +113,6 @@ export default {
           a{
             color: #595757;
             text-decoration: none;
-          }
-          .look::after{
-            display: inline-block;
-            font-family: 'icomoon';
-            content: '\e997';
-            color: #595757;
-            font-size: 17px;
-            vertical-align: middle;
-            margin-right: 6px;
           }
         }
       }

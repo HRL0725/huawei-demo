@@ -6,7 +6,11 @@
             </div>
             <div class="nav_c">
                 <ul class="nav_main">
-                    <li v-for="(item, index) in nav" :key="index"><a :href="item.link" class="navmain1" @mouseenter="aa(item)">{{item.text}}</a></li>
+                     <li><a href="#" @mouseenter="getnav(family)">个人及家庭产品</a></li>
+                    <li><a href="#" >商用产品及方案</a></li>
+                    <li><a href="#" >服务支持</a></li>
+                    <li><a href="#" >合作伙伴与开发者</a></li>
+                    <li><a href="#">关于华为</a></li>
                 </ul>
             </div>
             <div class="nav_r">
@@ -15,7 +19,7 @@
             </div>                    
    </div>
     <div class="nav_under">
-            <div class="family" @mouseleave="bb">
+            <div class="family">
                 <div class="family_top">
                     <div class="family_top_left">
                         <ul class="family_top_left_nav">
@@ -75,68 +79,39 @@
                     </div>
                 </div>
             </div>
-            <div class="company" @mouseleave="dd">
+            <div class="company">
                 <div class="company_top">
                     <div class="company_top_1">
                         <h3>产品</h3>
                         <div class="product">
-                            <dl>
-                                <dt>联接</dt>
-                                <dd><a href="#">运营商网络</a></dd>
-                                <dd><a>企业无线</a></dd>
-                                <dd><a>企业网络</a></dd>
-                                <dd><a>企业光网络</a></dd>
-                                <dd><a>数字能源</a></dd>
-                            </dl>
-                            <dl>
-                                <dt>云与计算</dt>
-                                <dd><a>华为云</a></dd>
-                                <dd><a>计算</a></dd>
-                                <dd><a>数据存储</a></dd>
-                                <dd><a>机器视觉</a></dd>
-                                <dd><a>智能协作</a></dd>
-                                <dd><a>鲲鹏计算机平台</a></dd>
-                                <dd><a>昇腾AI计算机</a></dd>
+                            <dl v-for="item in product" :key="item.id">
+                                <dt>{{item.text}}</dt>
+                                <dd><a href="#">{{item.text1}}</a></dd>
+                                <dd><a>{{item.text2}}</a></dd>
+                                <dd><a>{{item.text3}}</a></dd>
+                                <dd><a>{{item.text4}}</a></dd>
+                                <dd><a>{{item.text5}}</a></dd>
+                                <dd><a>{{item.text6}}</a></dd>
+                                <dd><a>{{item.text7}}</a></dd>
                             </dl>
                         </div>
                     </div>
-                    <div class="company_top_2">
-                        <h3>服务</h3>
+                    <div class="company_top_box">
+                      <div class="company_top_2" v-for="item in company" :key="item.id">
+                        <h3>{{item.text}}</h3>
                         <div class="serve">
                             <ul>
-                                <li><a>运营商网络服务</a></li>
-                                <li><a>企业网络服务</a></li>
-                                <li><a>华为云服务</a></li>
+                                <li><a>{{item.text1}}</a></li>
+                                <li><a>{{item.text2}}</a></li>
+                                <li><a>{{item.text3}}</a></li>
+                                <li><a>{{item.text4}}</a></li>
+                                <li><a>{{item.text5}}</a></li>
+                                <li><a>{{item.text6}}</a></li>
+                                <li><a>{{item.text7}}</a></li>
+                                <li><a>{{item.text8}}</a></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="company_top_3">
-                        <h3>行业解决方案</h3>
-                        <div class="solution">
-                            <ul>
-                                <li><a href="#">华为云行业解决方案</a></li>
-                                <li><a href="#">电信行业</a></li>
-                                <li><a href="#">数字政府</a></li>
-                                <li><a href="#">智慧园区</a></li>
-                                <li><a href="#">交通行业</a></li>
-                                <li><a href="#">电力行业</a></li>
-                                <li><a href="#">金融行业</a></li>
-                                <li><a href="#" class="more">查看更多</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="company_top_4">
-                        <h3>热门话题</h3>
-                        <div class="hot">
-                            <ul>
-                                <li><a href="#">智能体</a></li>
-                                <li><a href="#">5G,点亮未来</a></li>
-                                <li><a href="#">FG5,光联万物</a></li>
-                                <li><a href="#">自动驾驶网络</a></li>
-                                <li><a href="#">IPv6+,智联无限</a></li>
-                                <li><a href="#">先进工业网络</a></li>
-                            </ul>
-                        </div>
+                      </div>
                     </div>
                 </div>
                 <div class="company_under">
@@ -150,51 +125,18 @@
                     </div>
                 </div>
             </div>
-            <div class="support" @mouseleave="ff">
+            <div class="support">
                 <div class="support_top">
-                    <div>
-                        <h3>个人及家庭产品支持</h3>
+                    <div v-for="item in support" :key="item.id">
+                        <h3>{{item.text}}</h3>
                         <ul>
-                            <li><a href="#">在线客服</a></li>
-                            <li><a href="#">华为服务日</a></li>
-                            <li><a href="#">服务点查询</a></li>
-                            <li><a href="#">寄修服务</a></li>
-                            <li><a href="#">保修期及权益查询</a></li>
-                            <li><a href="#">备件价格查询</a></li>
-                            <li class="many"><a href="#">查看更多</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>华为云服务支持</h3>
-                        <ul>
-                            <li><a href="#">智能客服</a></li>
-                            <li><a href="#">新手入门</a></li>
-                            <li><a href="#">支持计划</a></li>
-                            <li><a href="#">自助服务</a></li>
-                            <li><a href="#">云社区</a></li>
-                            <li class="many"><a href="#">查看更多</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>企业业务支持</h3>
-                        <ul>
-                            <li><a href="#">智能客服</a></li>
-                            <li><a href="#">支持产品</a></li>
-                            <li><a href="#">软件下载</a></li>
-                            <li><a href="#">互动社区</a></li>
-                            <li><a href="#">工具</a></li>
-                            <li class="many"><a href="#">查看更多</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>运营商网络支持</h3>
-                        <ul>
-                            <li><a href="#">智能客服</a></li>
-                            <li><a href="#">产品支持</a></li>
-                            <li><a href="#">Group Space</a></li>
-                            <li><a href="#">公告</a></li>
-                            <li><a href="#">华为资料直通库</a></li>
-                            <li class="many"><a href="#">查看更多</a></li>
+                            <li><a href="#">{{item.text1}}</a></li>
+                            <li><a href="#">{{item.text2}}</a></li>
+                            <li><a href="#">{{item.text3}}</a></li>
+                            <li><a href="#">{{item.text4}}</a></li>
+                            <li><a href="#">{{item.text5}}</a></li>
+                            <li><a href="#">{{item.text6}}</a></li>
+                            <li class="many"><a href="#">{{item.text7}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -204,46 +146,18 @@
                     </div>
                 </div>
             </div>
-            <div class="develop" @mouseleave="hh">
+            <div class="develop">
                 <div class="develop_top">
-                    <div>
-                        <h3>合作伙伴</h3>
+                    <div v-for="item in develop" :key="item.id">
+                        <h3>{{item.text}}</h3>
                         <ul>
-                            <li><a href="#">成为合作伙伴</a></li>
-                            <li><a href="#">查找合作伙伴</a></li>
-                            <li><a href="#">云市场</a></li>
-                            <li class="lot"><a href="#">查看更多</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>培训与认证</h3>
-                        <ul>
-                            <li><a href="#">学习</a></li>
-                            <li><a href="#">华为认证</a></li>
-                            <li><a href="#">企业客户培训</a></li>
-                            <li><a href="#">华为ICT学院</a></li>
-                            <li><a href="#">华为云开发者课堂</a></li>
-                            <li class="lot"><a href="#">查看更多</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>云与计算开发者</h3>
-                        <ul>
-                            <li><a href="#">华为云</a></li>
-                            <li><a href="#">鲲鹏</a></li>
-                            <li><a href="#">昇腾</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>终端开发者</h3>
-                        <ul>
-                            <li><a href="#">开发</a></li>
-                            <li><a href="#">分发</a></li>
-                            <li><a href="#">变现</a></li>
-                            <li><a href="#">活动</a></li>
-                            <li><a href="#">开发者学堂</a></li>
-                            <li><a href="#">社区</a></li>
-                            <li class="lot"><a href="#">查看更多</a></li>
+                            <li><a href="#">{{item.text1}}</a></li>
+                            <li><a href="#">{{item.text2}}</a></li>
+                            <li><a href="#">{{item.text3}}</a></li>
+                            <li><a href="#">{{item.text4}}</a></li>
+                            <li><a href="#">{{item.text5}}</a></li>
+                            <li><a href="#">{{item.text6}}</a></li>
+                            <li><a href="#">{{item.text7}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -253,38 +167,23 @@
                     </div>
                 </div>
             </div>
-            <div class="about" @mouseleave="jj">
+            <div class="about">
                 <div class="about_top">
-                    <div class="about_top1">
-                        <h3>关于华为</h3>
+                    <div class="about_top1" v-for="item in about" :key="item.id">
+                        <h3>{{item.text}}</h3>
                         <ul>
-                            <li><a href="#">公司介绍&nbsp;&nbsp;</a></li>
-                            <li><a href="#">公司年报</a></li>
-                            <li><a href="#">公司治理&nbsp;&nbsp;</a></li>
-                            <li><a href="#">管理层信息</a></li>
-                            <li><a href="#">招贤纳士&nbsp;&nbsp;</a></li>
-                            <li><a href="#">联系我们</a></li>
-                            <li><a href="#">可持续发展</a></li>
-                            <li><a href="#">信任中心</a></li>
-                            <li><a href="#">合规与诚信</a></li>
-                            <li><a href="#">公共政策</a></li>
-                            <li><a href="#">债券投资者</a></li>
-                            <li><a href="#">供应商</a></li>
-                        </ul>
-                    </div>
-                    <div class="about_top2">
-                        <h3>新闻与活动</h3>
-                        <ul>
-                            <li><a href="#">新闻</a></li>
-                            <li><a href="#">展会活动</a></li>
-                            <li><a href="#">媒体图库</a></li>
-                        </ul>
-                    </div>
-                    <div class="about_top3">
-                        <h3>发现华为</h3>
-                        <ul>
-                            <li><a href="#">HaweiTech</a></li>
-                            <li><a href="#">出版物</a></li>
+                            <li><a href="#">{{item.text1}}&nbsp;&nbsp;</a></li>
+                            <li><a href="#">{{item.text2}}</a></li>
+                            <li><a href="#">{{item.text3}}&nbsp;&nbsp;</a></li>
+                            <li><a href="#">{{item.text4}}</a></li>
+                            <li><a href="#">{{item.text5}}&nbsp;&nbsp;</a></li>
+                            <li><a href="#">{{item.text6}}</a></li>
+                            <li><a href="#">{{item.text7}}</a></li>
+                            <li><a href="#">{{item.text8}}</a></li>
+                            <li><a href="#">{{item.text9}}</a></li>
+                            <li><a href="#">{{item.text10}}</a></li>
+                            <li><a href="#">{{item.text11}}</a></li>
+                            <li><a href="#">{{item.text12}}</a></li>
                         </ul>
                     </div>
                     <div class="about_top4">
@@ -302,63 +201,43 @@
 </template>
 
 <script>
-import jsonData from '../../../data.json'
+import jsonData from '../../../data'
 export default {
   data() {
     return {
-      nav: []
+      nav: [],
+      product: [],
+      company:[],
+      support:[],
+      develop:[],
+      about:[],
     }
   },
   methods:{
-    aa(){
-      var family = document.querySelector('.family')
-      family.style.display = 'block'
-    },
-    bb(){
-      var family = document.querySelector('.family')
-      family.style.display = 'none'
-    },
-    cc(){
-      var company = document.querySelector('.company')
-      company.style.display = 'block'
-    },
-    dd(){
-      var company = document.querySelector('.company')
-      company.style.display = 'none'
-    },
-    ee(){
-      var support = document.querySelector('.support')
-      support.style.display = 'block'
-    },
-    ff(){
-      var support = document.querySelector('.support')
-      support.style.display = 'none'
-    },
-    gg(){
-      var develop = document.querySelector('.develop')
-      develop.style.display = 'block'
-    },
-    hh(){
-      var develop = document.querySelector('.develop')
-      develop.style.display = 'none'
-    },
-    ii(){
-      var about = document.querySelector('.about')
-      about.style.display = 'block'
-    },
-    jj(){
-      var about = document.querySelector('.about')
-      about.style.display = 'none'
+    gatnav: function(n){
+      var n = document.querySelector('.n')
+     n.style.display = 'block'
     }
   },
   mounted(){
-    console.log(2223, jsonData.nav.length)
-    if(jsonData.nav.length) {
+    console.log(2223, jsonData)
+       if(jsonData.nav.length) {
       this.nav = jsonData.nav
       console.log(2223, this.nav)
     }
-  }
+    this.company = jsonData.company
+    console.log(2227,this.company),
+    this.product = jsonData.product
+    console.log(2226,this.product);
+    this.support = jsonData.support
+    console.log(2228,this.support);
+    this.develop = jsonData.develop
+    console.log(2229,this.develop);
+    this.about = jsonData.about
+    console.log(2300,this.about);
+  },
 }
+
 </script>
 
 <style lang="less" scoped>
@@ -393,6 +272,7 @@ export default {
         left: 500px;
         height: 78px;
         .nav_main{
+          margin: 0 20px;
           li{
             float: left;
             height: 78px;
@@ -684,12 +564,15 @@ export default {
               }
             }
           }
-          .company_top_2{
+          .company_top_box{
             position: absolute;
             top: 0;
             left: 648px;
+            .company_top_2{
+           float: left;
             width: 310px;
             height: 313px;
+            margin: 0 10px;
             h3{
               font-size: 35px;
               text-align: left;
@@ -710,69 +593,7 @@ export default {
                 }
               }
             }
-          }
-          .company_top_3{
-            position: absolute;
-            top: 0;
-            right: 398px;
-            width: 318px;
-            height: 596px;
-            h3{
-              font-size: 35px;
-              text-align: left;
-              border-bottom: 1px solid #ccc;
-              font-weight: normal;
-              color: #333333;
-            }
-            .solution{
-              margin-top: 30px;
-              li{
-                padding: 5px 0;
-                list-style: none;
-                a{
-                  font-size: 18px;
-                  font-weight: normal;
-                  color: #4d4d4d;
-                  text-decoration: none;
-                }
-              }
-              .more::after{
-                display: inline-block;
-                font-family: 'icomoon';
-                content: '\e930';
-                color: red;
-                font-size: 18px;
-                margin-left: 5px;
-                vertical-align: middle;
-              }
-            }
-          }
-          .company_top_4{
-            position: absolute;
-            top: 0;
-            right: 60px;
-            width: 322px;
-            height: 474px;
-            h3{
-              font-size: 35px;
-              text-align: left;
-              border-bottom: 1px solid #ccc;
-              font-weight: normal;
-              color: #333333;
-            }
-            .hot{
-              margin-top: 30px;
-              li{
-                padding: 5px 0;
-                list-style: none;
-                a{
-                  font-size: 18px;
-                  font-weight: normal;
-                  color: #4d4d4d;
-                  text-decoration: none;
-                }
-              }
-            }
+             }
           }
         }
         .company_under{
@@ -856,7 +677,7 @@ export default {
         height: 400px;
         .support_top{
           display: flex;
-          height: 370px;
+          height: 340px;
           justify-content: space-around;
           align-items: flex-start;
           div{
@@ -916,7 +737,7 @@ export default {
         display: none;
         .develop_top{
           display: flex;
-          height: 370px;
+          height: 340px;
           justify-content: space-around;
           align-items: flex-start;
           div{
@@ -974,6 +795,7 @@ export default {
       }
       .about{
         height: 400px;
+        display: none;
         .about_top{
           height: 370px;
           display: flex;
@@ -1012,12 +834,6 @@ export default {
                 a:hover{
                   text-decoration: underline;
                 }
-          }
-          .about_top2{
-            width: 170px;
-          }
-          .about_top3{
-            width: 170px;
           }
           .about_top4{
             width: 400px;

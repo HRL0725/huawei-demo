@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Shortcut></Shortcut>
+    <div>
+     <Shortcut></Shortcut>
     <Nav></Nav>
     <Slideshow></Slideshow>
     <Sliderbar></Sliderbar>
@@ -12,25 +13,26 @@
     <Any></Any>
     <Footer></Footer>
     <Base></Base>
+    </div>
   </div>
 </template>
 
 <script>
-import Shortcut from './views/shortcut/shortcut.vue'
-import Nav from './views/nav/nav.vue'
-import Slideshow from './views/slideshow/slideshow.vue'
-import Sliderbar from './views/sliderbar/sliderbar.vue'
-import Tuijian from './views/tuijian/tuijian.vue'
-import Recommend from './views/recommend/recommend.vue'
-import Public from './views/public/public.vue'
-import New from './views/new/new.vue'
-import Active from './views/active/active.vue'
-import Any from './views/any/any.vue'
-import Footer from './views/footer/footer.vue'
-import Base from './views/base/base.vue'
+  import Shortcut from '../src/views/shortcut/shortcut.vue'
+  import Nav from './views/nav/nav.vue'
+  import Slideshow from './views/slideshow/slideshow.vue'
+  import Sliderbar from './views/sliderbar/sliderbar.vue'
+  import Tuijian from './views/tuijian/tuijian.vue'
+  import Recommend from './views/recommend/recommend.vue'
+  import Public from './views/public/public.vue'
+  import New from './views/new/new.vue'
+  import Active from './views/active/active.vue'
+  import Any from './views/any/any.vue'
+  import Footer from './views/footer/footer.vue'
+  import Base from './views/base/base.vue'
 export default {
   components:{
-    Shortcut,
+   Shortcut,
     Nav,
     Slideshow,
     Sliderbar,
@@ -39,7 +41,7 @@ export default {
     Public,
     New,
     Active,
-    Any,
+    Any, 
     Footer,
     Base
   }

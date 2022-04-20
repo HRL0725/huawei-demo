@@ -19,5 +19,342 @@
             "link": "#",
             "text": "关于华为"
         }
+    ],
+    "shortcut1": [{
+            "text": "集团网站",
+            "text1": "公司介绍，新闻动态，展会活动等信息"
+        },
+        {
+            "text": "消费业务网站",
+            "text1": "手机,PC和平板等智慧生活产品"
+        },
+        {
+            "text": "企业业务网站",
+            "text1": "企业商用产品、解决方案和云服务"
+        },
+        {
+            "text": "运营商业务网络网站",
+            "text1": "运营商网络解决方案、产品及服务"
+        },
+        {
+            "text": "华为云网站",
+            "text1": "华为云服务及解决方案"
+        }
+    ],
+    "shortcut2": [{
+            "country1": "Australia - ",
+            "language1": "English",
+            "country2": "Belarus - ",
+            "language2": "Pусский",
+            "country3": "Brazil - ",
+            "language3": "Portuguese",
+            "country4": "Canada - ",
+            "language4": "English",
+            "country5": "China - ",
+            "language5": "简体中文"
+        },
+        {
+            "country1": "France - ",
+            "language1": "Français",
+            "country2": "Germany - ",
+            "language2": "Deutsch",
+            "country3": "Ireland - ",
+            "language3": "English",
+            "country4": "Italy - ",
+            "language4": "Italiano",
+            "country5": "Japan - ",
+            "language5": "日本語"
+        },
+        {
+            "country1": "Kazakstan - ",
+            "language1": "Pусский",
+            "country2": "Kenya - ",
+            "language2": "English",
+            "country3": "Korea - ",
+            "language3": "한국어",
+            "country4": "Malaysia - ",
+            "language4": "English",
+            "country5": "",
+            "language5": ""
+        },
+        {
+            "country1": "New Zealand - ",
+            "language1": "English",
+            "country2": "Netherlands - ",
+            "language2": "Dutch",
+            "country3": "Romania - ",
+            "language3": "Română",
+            "country4": "Russia - ",
+            "language4": "Pусский",
+            "country5": "",
+            "language5": ""
+        },
+        {
+            "country1": "United Kingdom - ",
+            "language1": "English",
+            "country2": "United States - ",
+            "language2": "English",
+            "country3": "Uzbekistan - ",
+            "language3": "Pусский",
+            "country4": "Uzbekistan - ",
+            "language4": "O'zbek",
+            "country5": "",
+            "language5": ""
+        }
+    ],
+    "product": [{
+            "text": "联接",
+            "text1": "运营商网络",
+            "text2": "企业无线",
+            "text3": "企业网络",
+            "text4": "企业光网络",
+            "text5": "数字能源",
+            "text6": "",
+            "text7": ""
+        },
+        {
+            "text": "云与计算",
+            "text1": "华为云",
+            "text2": "计算",
+            "text3": "数据存储",
+            "text4": "机器视觉",
+            "text5": "智能协作",
+            "text6": "鲲鹏计算机平台",
+            "text7": "昇腾AI计算机"
+        }
+    ],
+    "company": [{
+            "text": "服务",
+            "text1": "运营商网络服务",
+            "text2": "企业网络服务",
+            "text3": "华为云服务",
+            "text4": "",
+            "text5": "",
+            "text6": "",
+            "text7": "",
+            "text8": ""
+        },
+        {
+            "text": "行业解决方案",
+            "text1": "华为云行业解决方案",
+            "text2": "电信行业",
+            "text3": "数字政府",
+            "text4": "智慧园区",
+            "text5": "交通行业",
+            "text6": "电力行业",
+            "text7": "金融行业",
+            "text8": "查看更多"
+        },
+        {
+            "text": "热门话题",
+            "text1": "智能体",
+            "text2": "5G,点亮未来",
+            "text3": "FG5,光联万物",
+            "text4": "自动驾驶网络",
+            "text5": "IPv6+,智联无限",
+            "text6": "先进工业网络",
+            "text7": "",
+            "text8": ""
+        }
+    ],
+    "support": [{
+            "text": "个人及家庭产品支持",
+            "text1": "在线客服",
+            "text2": "华为服务日",
+            "text3": "服务点查询",
+            "text4": "寄修服务",
+            "text5": "保修期及权益查询",
+            "text6": "备件价格查询",
+            "text7": "查看更多"
+        },
+        {
+            "text": "华为云服务支持",
+            "text1": "智能客服",
+            "text2": "新手入门",
+            "text3": "支持计划",
+            "text4": "自助服务",
+            "text5": "云社区",
+            "text6": "查看更多",
+            "text7": ""
+        },
+        {
+            "text": "企业业务支持",
+            "text1": "智能客服",
+            "text2": "支持产品",
+            "text3": "软件下载",
+            "text4": "互动社区",
+            "text5": "工具",
+            "text6": "查看更多",
+            "text7": ""
+        },
+        {
+            "text": "运营商网络支持",
+            "text1": "智能客服",
+            "text2": "产品支持",
+            "text3": "Group Space",
+            "text4": "公告",
+            "text5": "华为资料直通库",
+            "text6": "查看更多",
+            "text7": ""
+        }
+    ],
+    "develop": [{
+            "text": "合作伙伴",
+            "text1": "成为合作伙伴",
+            "text2": "查找合作伙伴",
+            "text3": "云市场",
+            "text4": "查看更多",
+            "text5": "",
+            "text6": "",
+            "text7": ""
+        },
+        {
+            "text": "培训与认证",
+            "text1": "学习",
+            "text2": "华为认证",
+            "text3": "企业客户培训",
+            "text4": "华为ICT学院",
+            "text5": "华为云开发者课堂",
+            "text6": "查看更多",
+            "text7": ""
+        },
+        {
+            "text": "云与计算开发者",
+            "text1": "华为云",
+            "text2": "鲲鹏",
+            "text3": "昇腾",
+            "text4": "",
+            "text5": "",
+            "text6": "",
+            "text7": ""
+        },
+        {
+            "text": "终端开发者",
+            "text1": "开发",
+            "text2": "分发",
+            "text3": "变现",
+            "text4": "活动",
+            "text5": "开发者学堂",
+            "text6": "社区",
+            "text7": "查看更多"
+        }
+    ],
+    "about": [{
+            "text": "关于华为",
+            "text1": "公司介绍",
+            "text2": "公司年报",
+            "text3": "公司治理",
+            "text4": "管理层信息",
+            "text5": "招贤纳士",
+            "text6": "联系我们",
+            "text7": "可持续发展",
+            "text8": "信任中心",
+            "text9": "合规与诚信",
+            "text10": "公共政策",
+            "text11": "债券投资者",
+            "text12": "供应商"
+        },
+        {
+            "text": "新闻与活动",
+            "text1": "新闻",
+            "text2": "展会活动",
+            "text3": "媒体图库"
+        },
+        {
+            "text": "发现华为",
+            "text1": "HaweiTech",
+            "text2": "出版物"
+        }
+    ],
+    "active": [{
+            "src": "../../assets/11.jpg",
+            "text": "展会活动",
+            "text1": "2022世界移动大会",
+            "text2": "西班牙，巴塞罗那",
+            "text3": "2022年2月28日 - 3月3日",
+            "text4": "面向未来，华为与全球运营商、合作伙伴一起，打造极简、绿色、智能的ICT基础设施，坚持科技向善，致力于以创新的技术和产品解决方案让生活更美好、商业更智..."
+        },
+        {
+            "src": "../../assets/12.jpg",
+            "text": "展会活动",
+            "text1": "2022运营转型峰会",
+            "text2": "西班牙，巴塞罗那",
+            "text3": "2022年3月1日 - 2日",
+            "text4": "沿着运营运维数智化转型的旅程，携手将数智技术和创新带入运营运维每一个环节，引领智能新体验、新价值，构建万物互联的智能世界。"
+        }
+    ],
+    "active1": [{
+            "text": "华为获新加坡资媒局授予数据保护信任标志",
+            "text1": "2022年03月16日"
+        },
+        {
+            "text": "华为和中国联通携手产业伙伴发布5G专网PLUS系列成果",
+            "text1": "2022年03月11日"
+        },
+        {
+            "text": "华为联合中国移动等产业伙伴发布《5G -Advanced网络技术演进白皮书2.0》",
+            "text1": "2022年03月10日"
+        },
+        {
+            "text": "'打破偏见'，华为庆祝2022国际妇女节",
+            "text1": "2022年03月09日"
+        },
+        {
+            "text": "华为联合中国信通院、中国移动研究院发布《5G ToC音视频体验需求蓝皮书》",
+            "text1": "2022年03月08日"
+        }
+    ],
+    "footer": [{
+            "text": "关于华为",
+            "text1": "公司简介",
+            "text2": "可持续发展",
+            "text3": "信任中心",
+            "text4": "管理层信息",
+            "text5": "招贤纳士",
+            "text6": "供应商",
+            "text7": "查看更多"
+        },
+        {
+            "text": "新闻与活动",
+            "text1": "新闻",
+            "text2": "展会活动",
+            "text3": "媒体图库"
+        },
+        {
+            "text": "发现华为",
+            "text1": "HuaweiTech",
+            "text2": "出版物"
+        },
+        {
+            "text": "我们的产品",
+            "text1": "个人及家庭产品",
+            "text2": "企业业务产品",
+            "text3": "运营商网络产品",
+            "text4": "华为云服务"
+        },
+        {
+            "text": "技术支持",
+            "text1": "消费者技术支持",
+            "text2": "华为技术支持",
+            "text3": "企业技术支持",
+            "text4": "运营商技术支持",
+            "text5": "产品安全通告"
+        }
+    ],
+    "footer1": [{
+            "text": "华为商城"
+        },
+        {
+            "text": "华为云"
+        },
+        {
+            "text": "华为智能光伏"
+        },
+        {
+            "text": "产品定义社区"
+        },
+        {
+            "text": "华为心声社会"
+        }
     ]
 }
